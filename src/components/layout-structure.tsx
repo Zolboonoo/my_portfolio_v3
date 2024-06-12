@@ -10,10 +10,12 @@ export default function Layout({
 }) {
   return (
     <React.StrictMode>
-      <div style={{ border: '1px solid #ccc', padding: '10px' }} >
-        <Header></Header>
-        {children}
-        <Footer></Footer>
+      <div className="flex flex-col min-h-screen">
+        <Header/>
+        <main className="flex-1 inline">
+          {children}
+        </main>
+        <Footer/>
       </div>
     </React.StrictMode>
   );
