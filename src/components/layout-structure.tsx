@@ -1,22 +1,20 @@
-// import React from 'react';
-// import Head from 'next/head';
-// import Header from './header-structure';
-
-// const Layout: React.FC = ({ children }) => {
-//   return (
-//     <div className="flex flex-col min-h-screen">
-//       <Head>
-//         <title>Your Website Title</title>
-//         <meta name="description" content="Description of your website" />
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-      
-//       <main className="flex-1">
-//       { children }
-//       </main>
-//       {/* You can add a footer component here if needed */}
-//     </div>
-//   );
-// };
-
-// export default Layout;
+// app/posts/layout.tsx
+"use client";
+import React from "react";
+import Header from "./header-structure";
+import Footer from "./footer-structure";
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <React.StrictMode>
+      <div style={{ border: '1px solid #ccc', padding: '10px' }} >
+        <Header></Header>
+        {children}
+        <Footer></Footer>
+      </div>
+    </React.StrictMode>
+  );
+}

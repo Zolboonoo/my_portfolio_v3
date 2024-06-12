@@ -43,8 +43,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
-        ...
-        <p>hi</p>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

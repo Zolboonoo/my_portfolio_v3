@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@/components/layout-structure';
-const WorksPage: React.FC = () => {
+const PortfolioPage: React.FC = () => {
   return (
     <React.StrictMode>
       <Layout>
@@ -21,4 +21,5 @@ const WorksPage: React.FC = () => {
   );
 };
 
-export default WorksPage;
+
+export default PortfolioPage;

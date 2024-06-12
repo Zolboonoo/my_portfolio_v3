@@ -1,45 +1,60 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { ModeToggle } from './mode-toggle';
+import React from "react";
+import PageHeader from "./header-title-design";
+import Image from "next/image";
+import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
+import Link from "next/link";
+import "@/styles/main.css";
 
-interface HeaderProps {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
+function Header() {
   return (
-    <header className="flex justify-between items-center py-4 px-8 bg-gray-900 text-white">
-      <div className="flex items-center space-x-4">
-        <Link href="/">
-          <p className="text-xl font-bold">Your Logo</p>
-        </Link>
-        <nav className="space-x-4">
-          <Link href="/">
-            <p>Home</p>
+    <React.StrictMode>
+      <div className='header h-16 max-auto sticky rounded-lg px-4 justify-between items-center flex bg-zinc-100 dark:bg-zinc-950'>
+      <a href="/IndexPage" className="logo">
+      <Image
+      src="/public/assets/cal_logo.png"
+        width={500}
+        height={500}
+        alt="CAL Logo"
+          />
+      </a>
+        <ul className='header-right h-16 max-auto top-2 sticky rounded-lg px-4 py-2 justify-between items-center flex bg-zinc-100 dark:bg-zinc-950'>
+          <a className="page-header-title page-header-title:hover" href="/IndexPage">Home</a>
+          <a className="page-header-title page-header-title:hover" href="/AboutPage">About me</a>
+          <a className="page-header-title page-header-title:hover" href="/PortfolioPage">Portfolio</a>
+          <Link legacyBehavior href="/HirePage" className='p-2'>
+              <Button variant="outline">Hire me</Button>
           </Link>
-          <Link href="/about">
-            <p>About Me</p>
-          </Link>
-          <Link href="/works">
-            <p>My Works</p>
-          </Link>
-        </nav>
+          <div>
+            <ModeToggle/>
+          </div>
+        </ul>
       </div>
-      <div>
-        <button
-          className="inline-flex items-center justify-center p-2 rounded-full bg-gray-800 hover:bg-gray-700 focus:outline-none"
-          onClick={toggleDarkMode}
-        >
-          {darkMode ? <SunIcon className="w-6 h-6 text-yellow-500" /> : <MoonIcon className="w-6 h-6 text-gray-300" />}
-        </button>
-        <Link href="/hire">
-          <p className="ml-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">Hire Me</p>
-        </Link>
-      </div>
-    </header>
+    </React.StrictMode>
   );
 };
+
+// function Header(){
+//   return (
+//     <React.StrictMode>
+//       <Menubar>
+//         <MenubarMenu>
+//           <MenubarTrigger>File</MenubarTrigger>
+//           <MenubarContent>
+//             <MenubarItem>
+//               New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+//             </MenubarItem>
+//             <MenubarItem>New Window</MenubarItem>
+//             <MenubarSeparator />
+//             <MenubarItem>Share</MenubarItem>
+//             <MenubarSeparator />
+//             <MenubarItem>Print</MenubarItem>
+//           </MenubarContent>
+//         </MenubarMenu>
+//       </Menubar>
+//     </React.StrictMode>
+//   );
+// };
+
 
 export default Header;
