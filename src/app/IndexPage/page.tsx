@@ -1,4 +1,5 @@
 // pages/index.tsx
+"use client";
 import React from 'react';
 import Layout from '@/components/layout-structure';
 
@@ -8,6 +9,7 @@ export default function IndexPage(){
     <React.StrictMode>
       <Layout>
         <div className="container mx-auto">
+          <h1>this is IndexPage</h1>
           <h1 className="text-2xl font-bold mt-8 text-red-700">Main Content is here</h1>
         </div>
       </Layout>
