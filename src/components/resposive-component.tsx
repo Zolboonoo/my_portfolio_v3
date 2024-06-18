@@ -1,4 +1,5 @@
 // components/ResponsiveComponent.tsx
+"use client";
 import React from 'react';
 
 export default function ResponsiveComponent({
@@ -14,4 +15,3 @@ export default function ResponsiveComponent({
   );
 };
 
-export default ResponsiveComponent;
