@@ -98,7 +98,7 @@ export function NavigationMenuDemo() {
           </Link>
         </NavigationMenuItem>
         <Link legacyBehavior href="/HirePage" className='pl-2 ml-4'>
-          <Button variant="outline">Hire me</Button>
+          <Button className="hire-me-button" variant="outline">Hire me</Button>
         </Link>
         <NavigationMenuList>
           <ModeToggle/>

@@ -23,9 +23,9 @@ export default function IndexPage(){
         <div className="container mx-auto">
           <Image
             src="/assets/profilePic.jpg"
-            className='h-[250px] w-[250px] rounded-2xl mt-3'
-            width={500}
-            height={500}
+            className='rounded-2xl mt-6'
+            width={250}
+            height={250}
             alt="Picture of the author"
           />
           <h1 className="text-2xl font-bold mt-8">Hi, I am Zolboo.</h1>
